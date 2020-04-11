@@ -1,0 +1,53 @@
+name: clash-issue1256
+version: 0
+category: hardware
+
+dependencies:
+  - base
+  - clash-prelude
+  - clash-lib
+  - clash-ghc
+
+  - mtl
+  - transformers
+
+default-extensions:
+  - BinaryLiterals
+  - ConstraintKinds
+  - DataKinds
+  - DeriveAnyClass
+  - DeriveGeneric
+  - DeriveLift
+  - DerivingStrategies
+  - ExplicitForAll
+  - ExplicitNamespaces
+  - FlexibleContexts
+  - FlexibleInstances
+  - KindSignatures
+  - MagicHash
+  - MonoLocalBinds
+  - NoImplicitPrelude
+  - NoMonomorphismRestriction
+  - NoStarIsType
+  - NoStrictData
+  - NoStrict
+  - QuasiQuotes
+  - ScopedTypeVariables
+  - TemplateHaskellQuotes
+  - TemplateHaskell
+  - TypeApplications
+  - TypeFamilies
+  - TypeInType
+  - TypeOperators
+
+source-dirs:
+  - src
+
+ghc-options: -rtsopts -with-rtsopts=-M2M
+
+executables:
+  sim-logicboard:
+    main: sim-logicboard.hs
+
+  sim-cpu:
+    main: sim-cpu.hs
